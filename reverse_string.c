@@ -5,6 +5,8 @@
 /* String.h includes one variable type, one macro, and several functions for 
 manipulating arrays of characters.*/
 
+void reverseWithRecursion(char*, int , int); //Function definitions
+
 /*void reverseFunction(char *string)
 {
 	strrev(string);
@@ -63,6 +65,22 @@ void reverseWithPointer(char *string)
 	}
 }
 
+void reverseWithRecursion(char *x, int begin, int end)
+{
+	char c;
+
+	if(begin>= end)
+	{
+		return;
+	}
+
+	c = *(x+begin);
+	*(x+begin) = *(x+end);
+	*(x+end) = c;
+
+	reverseWithRecursion(x, ++begin, --end);
+}
+
 int main()
 {
 	char arr[100];
@@ -72,7 +90,8 @@ int main()
 	gets(arr); //reads string in from stdin and stores into string pointed to by arr.
 
 	//rev = reverseWithoutFunction(arr);
-	reverseWithPointer(arr);
+	//reverseWithPointer(arr);
+	reverseWithRecursion(arr, 0, strlen(arr)-1);
 
 	printf("Reverse of entered string is \n%s\n", arr);
 
