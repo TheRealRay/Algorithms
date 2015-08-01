@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>  /* for dynamic allocation */
+#include "stack.h"
 
 /*
  * LIFO
@@ -62,7 +64,4 @@ stackElementT stackPop(stackT *stackP)
 	return stackP->contents[stackP->top--];
 }
 
-int main(void)
-{
-
-}
+// When you pass a stack to functions, pass by reference

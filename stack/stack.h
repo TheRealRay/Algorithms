@@ -1,3 +1,6 @@
+#ifndef _STACK_H
+#define _STACK_H
+
 typedef char stackElement;
 
 typedef struct {
@@ -26,3 +29,4 @@ void stackPush(stackT *stackP, stackElementT element);
 
 stackElementT stackPop(stackT *stackP);
 
+#endif  /* not defined _STACK_H */
