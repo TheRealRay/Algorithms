@@ -29,4 +29,4 @@ void stackPush(stackT *stackP, stackElementT element);
 
 stackElementT stackPop(stackT *stackP);
 
-#endif  /* not defined _STACK_H */
+#endif
